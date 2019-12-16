@@ -1,10 +1,11 @@
 <script>
   import ThirdNav from './ThirdNav.svelte';
+  import { fly } from 'svelte/transition';
   export let category;
 </script>
 
 <!-- markup (zero or more items) goes here -->
-<nav>
+<nav transition:fly={{ x: -200, duration: 500, opacity: 1}}>
   <ul>
     <li on:mouseover={e => category = 'quizz'}>
       <a href="#">
@@ -49,12 +50,11 @@
 <style lang="scss">
   nav {
     position: absolute;
-    background-color: #D8D8D8;
+    background-color: #e8e8e8;
     left: 61px;
     width: 200px;
     height: 100%;
     max-height: calc(100vh - 70px);
-    border-right: 1px solid var(--main-color);
 
     ul {
       margin: 0 auto;

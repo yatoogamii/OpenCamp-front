@@ -1,9 +1,10 @@
 <script>
+  import { fly } from 'svelte/transition';
   export let category = 'quizz';
 </script>
 
 <!-- markup (zero or more items) goes here -->
-<nav>
+<nav in:fly={{x: -200, duration: 500, opacity: 1}} out:fly={{x: -400, duration: 500, opcaity: 1}}>
   <ul>
     <li> {category} </li>
     <li> {category} </li>
@@ -18,12 +19,11 @@
 <style lang="scss">
  nav {
   position: absolute;
-  background-color: #cccccc;
+  background-color: #e8e8e8;
   left: 261px;
   width: 200px;
   height: 100%;
   max-height: calc(100vh - 70px);
-  border-right: 1px solid var(--main-color);
 
   ul {
     margin: 0 auto;

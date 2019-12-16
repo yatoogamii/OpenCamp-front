@@ -1,5 +1,6 @@
 <script>
   import SecondNav from './SecondNav.svelte';
+
   let secondNavVisible = false;
   let category;
 
@@ -57,7 +58,6 @@
     position: fixed;
     background-color: #e8e8e8;
     width: 61px;
-    border-right: 1px solid var(--main-color);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
