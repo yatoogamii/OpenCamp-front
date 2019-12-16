@@ -4,7 +4,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "heroku": "cd public && git add . && git commit -am 'make it better' && git push heroku master"
   },
   "devDependencies": {
     "node-sass": "^4.13.0",
