@@ -10,37 +10,37 @@
 <div on:mouseover={e => secondNavVisible = true} on:mouseleave={e => secondNavVisible = false}>
   <nav>
     <ul>
-      <li on:mouseover={e => category = 'quizz'}>
+      <li on:click={e => category = 'quizz'}>
         <a href="#">
           <i class="fas fa-chess-queen"></i>
         </a>
       </li>
-      <li on:mouseover={e => category = 'challenge'}>
+      <li on:click={e => category = 'challenge'}>
         <a href="#">
           <i class="fas fa-chess-queen"></i>
         </a>
       </li>
-      <li on:mouseover={e => category = 'leaderboard'}>
+      <li on:click={e => category = 'leaderboard'}>
         <a href="#">
           <i class="fas fa-chess-queen"></i>
         </a>
       </li>
-      <li on:mouseover={e => category = 'review'}>
+      <li on:click={e => category = 'review'}>
         <a href="#">
           <i class="fas fa-chess-queen"></i>
         </a>
       </li>
-      <li on:mouseover={e => category = 'debug'}>
+      <li on:click={e => category = 'debug'}>
         <a href="#">
           <i class="fas fa-chess-queen"></i>
         </a>
       </li>
-      <li on:mouseover={e => category = 'cursus'}>
+      <li on:click={e => category = 'cursus'}>
         <a href="#">
           <i class="fas fa-chess-queen"></i>
         </a>
       </li>
-      <li on:mouseover={e => category = 'flashcard'}>
+      <li on:click={e => category = 'flashcard'}>
         <a href="#">
           <i class="fas fa-chess-queen"></i>
         </a>

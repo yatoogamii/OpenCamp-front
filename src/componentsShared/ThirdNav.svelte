@@ -4,7 +4,7 @@
 </script>
 
 <!-- markup (zero or more items) goes here -->
-<nav in:fly={{x: -200, duration: 500, opacity: 1}} out:fly={{x: -400, duration: 500, opcaity: 1}}>
+<nav in:fly={{x: -200, duration: 500, opacity: 1}} out:fly={{x: -400, duration: 500, opacity: 1}}>
   <ul>
     <li> {category} </li>
     <li> {category} </li>

@@ -2,42 +2,43 @@
   import ThirdNav from './ThirdNav.svelte';
   import { fly } from 'svelte/transition';
   export let category;
+  let thirdNavVisible = false;
 </script>
 
 <!-- markup (zero or more items) goes here -->
 <nav transition:fly={{ x: -200, duration: 500, opacity: 1}}>
   <ul>
-    <li on:mouseover={e => category = 'quizz'}>
+    <li on:click={e => category = 'quizz'} on:click={e => thirdNavVisible = true}>
       <a href="#">
         Quizz
       </a>
     </li>
-    <li on:mouseover={e => category = 'challenge'}>
+    <li on:click={e => category = 'challenge'} on:click={e => thirdNavVisible = true}>
       <a href="#">
         Challenge
       </a>
     </li>
-    <li on:mouseover={e => category = 'leaderboard'}>
+    <li on:click={e => category = 'leaderboard'} on:click={e => thirdNavVisible = true}>
       <a href="#">
         Leaderboard
       </a>
     </li>
-    <li on:mouseover={e => category = 'review'}>
+    <li on:click={e => category = 'review'} on:click={e => thirdNavVisible = true}>
       <a href="#">
         Review
       </a>
     </li>
-    <li on:mouseover={e => category = 'debug'}>
+    <li on:click={e => category = 'debug'} on:click={e => thirdNavVisible = true}>
       <a href="#">
         Debug
       </a>
     </li>
-    <li on:mouseover={e => category = 'cursus'}>
+    <li on:click={e => category = 'cursus'} on:click={e => thirdNavVisible = true}>
       <a href="#">
         cursus
       </a>
     </li>
-    <li on:mouseover={e => category = 'flashcard'}>
+    <li on:click={e => category = 'flashcard'} on:click={e => thirdNavVisible = true}>
       <a href="#">
         flashcard
       </a>
@@ -45,8 +46,9 @@
   </ul>
 </nav>
 
-<ThirdNav category={category} />
-
+{#if thirdNavVisible}
+  <ThirdNav category={category} />
+{/if}
 <style lang="scss">
   nav {
     position: absolute;
